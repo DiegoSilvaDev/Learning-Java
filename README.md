@@ -93,4 +93,8 @@ Mais do que reunir códigos, a proposta é praticar os conceitos estudados, comp
 
 ---
 
+<<<<<<< HEAD
 **Em constante aprendizado.** ☕
+=======
+**Em constante aprendizado.** ☕
+>>>>>>> b45c6cf598137e395ee82e9be84a249db1e6f3de
