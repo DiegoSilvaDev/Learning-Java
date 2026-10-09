@@ -14,7 +14,7 @@ Os operadores aritméticos são usados para realizar operações matemáticas co
 
 - **Adição (+)**
 - **Subtração (-)**
-- **Multiplicação ('\*')**
+- **Multiplicação (\*)**
 - **Divisão (/)**
 - **Módulo (resto da divisão) (%)**
 
