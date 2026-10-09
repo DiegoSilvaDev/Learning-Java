@@ -20,7 +20,7 @@ switch (day) {
 Exemplo 2: 
 
 ```java
-String day = "Ter";
+String day = "Ter.";
 
 String typeOfDay = switch (day) {
 	case "Seg.", "Ter.", "Qua.", "Qui.", "Sex." -> "Dia util";
