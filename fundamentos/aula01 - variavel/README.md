@@ -20,3 +20,9 @@ As variáveis em Java são divididas principalmente em três categorias principa
 - **De Instância (Campos)**: Declaradas dentro da classe, mas fora de qualquer método; Pertencem a uma instância específica do objeto.
 - **Estáticas (De Classe)**: Declaradas com a palavra-chave `static`; Pertencem à própria classe e são compartilhadas por todos os objetos dela.
 
+
+## Boas Práticas e Regras de Nomenclatura
+
+- **Camel Case**: Nomes compostos devem começar com letra minúscula e as palavras seguintes com letra maiúscula (ex: `quantidadePassos`).
+- **Case-sensitive**: O Java diferencia maiúsculas de minúsculas (`idade` é diferente de `Idade`).
+- **Constantes**: Para criar valores imutáveis, utiliza-se a palavra-chave `final` (ou `static final` para constantes globais), geralmente escritas em letras maiúsculas.
