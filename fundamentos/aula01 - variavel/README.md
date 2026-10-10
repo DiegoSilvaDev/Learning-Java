@@ -18,5 +18,5 @@ As variáveis em Java são divididas principalmente em três categorias principa
 
 - **Locais**: Declaradas dentro de métodos, construtores ou blocos de código; Só podem ser usadas ali dentro.
 - **De Instância (Campos)**: Declaradas dentro da classe, mas fora de qualquer método; Pertencem a uma instância específica do objeto.
--**Estáticas (De Classe)**: Declaradas com a palavra-chave `static`; Pertencem à própria classe e são compartilhadas por todos os objetos dela.
+- **Estáticas (De Classe)**: Declaradas com a palavra-chave `static`; Pertencem à própria classe e são compartilhadas por todos os objetos dela.
 
