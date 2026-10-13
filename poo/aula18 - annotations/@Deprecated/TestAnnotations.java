@@ -19,7 +19,7 @@ public class TestAnnotations {
 
 		// Uso do método obsoleto (deprecated)
 		regras.mostrarRegrasParaAposentadoria();
-
+		//
 		// -Xlint:deprecation
 
 		// Uso do novo método
