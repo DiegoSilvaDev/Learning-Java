@@ -8,7 +8,6 @@ class InformaRegras  {
 	public void mostrarNovasRegrasParaAposentadoria() {
 		System.out.println("Novas regras para Aposentadoria");
 	}
-
 }	
 
 public class TestAnnotations {
