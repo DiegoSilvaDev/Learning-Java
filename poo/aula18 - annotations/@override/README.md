@@ -6,7 +6,7 @@ Algumas das mais comuns.
 
 A anotação `@Override` em Java indica ao compilador que um método da classe filha está sobrescrevendo (*overriding*) um método da classe pai ou implementando um método de uma interface.
 
-Para que serve
+## Para que serve
 
 - **Verificação em tempo de compilação**: O compilador checa se a assinatura (nome, parâmetros e tipo de retorno) do método realmente existe na superclasse. Se houver um erro de digitação no nome ou nos parâmetros, o compilador gera um erro.
 - **Legibilidade**: Deixa claro para outros desenvolvedores que aquele método é uma redefinição de um comportamento herdado.
