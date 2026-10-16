@@ -1,5 +1,20 @@
 # Projeto Calculadora de IMC
 
+Wireframe (rascunho) Calculadora de IMC
+
++-------------------------------+
+|								|	
+|		  Calculadora 			|
+|		 	De IMC				|
+|								|
+|		Peso: ____ KG			|
+|								|
+|		Altura:____ m			|
+|								|
+|		[ Calcular IMC ]		|
+|								|
++-------------------------------+
+
 ## Tabela de classificação de IMC
 
 |**IMC (kg/m²**)| **Classificação**|
