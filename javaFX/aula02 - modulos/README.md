@@ -9,7 +9,7 @@ Módulos são como caixas de ferramentas organizadas.
 
 ### Compilação exemplo:
 
-```java
+```bash
 	javac --module-path "C:\Program Files\Java\javafx-sdk-21.0.12\lib" --add-modules javafx.controls JavaFXMinhaAplicacao.java
 	
 	// Ou
@@ -19,7 +19,7 @@ Módulos são como caixas de ferramentas organizadas.
 
 ### Execução exemplo:
 
-```java
+```bash
 	java --module-path "C:\Program Files\Java\javafx-sdk-21.0.12\lib" --add-modules javafx.controls JavaFXMinhaAplicacao
 
 	// Ou
