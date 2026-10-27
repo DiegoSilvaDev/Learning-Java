@@ -1,0 +1,108 @@
+{
+  "info": {
+    "_postman_id": "bc1a799c-281b-443f-aab9-539bcf4aec17",
+    "name": "SpringBoot",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "12554189"
+  },
+  "item": [
+    {
+      "name": "Produtos",
+      "item": [
+        {
+          "name": "GET - listarTodos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/produtos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "produtos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET - buscarPorId",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/produtos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "produtos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST - inserir",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/produtos",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "produtos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT - atualizar",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DEL - deletById",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/produtos/2",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "produtos",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
