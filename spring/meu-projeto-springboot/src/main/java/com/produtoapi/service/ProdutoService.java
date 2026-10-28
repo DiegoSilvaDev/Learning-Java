@@ -25,6 +25,10 @@ public class ProdutoService {
         produtoRepository.deleteById(id);
     }
 
+    public void deletarTudo() {
+        produtoRepository.deleteAll();
+    }
+
     public Produto atualizar(Long id, Produto produto){
         if(produtoRepository.existsById(id)) {
             produto.setId(id);
@@ -36,6 +40,10 @@ public class ProdutoService {
 
     public Optional<Produto> findById(Long id) {
         return produtoRepository.findById(id);
+    }
+
+    public List<Produto> salvarLista(List<Produto> produtos){
+        return produtoRepository.saveAll(produtos);
     }
 
 }

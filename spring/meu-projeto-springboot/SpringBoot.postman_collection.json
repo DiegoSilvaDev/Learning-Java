@@ -48,6 +48,25 @@
           "response": []
         },
         {
+          "name": "POST - salvarLista",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/produtos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "produtos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
           "name": "POST - inserir",
           "request": {
             "method": "POST",
@@ -85,6 +104,25 @@
         },
         {
           "name": "DEL - deletById",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/produtos/2",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "produtos",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DEL - deletAll",
           "request": {
             "method": "DELETE",
             "header": [],

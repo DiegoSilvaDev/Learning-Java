@@ -38,10 +38,19 @@ public class ProdutoController {
         produtoService.deletar(id);
     }
 
+    @DeleteMapping
+    public void deletarTudo() {
+        produtoService.deletarTudo();
+    }
+
     @GetMapping("/{id}")
     public Optional<Produto> findById(@PathVariable Long id){
         return produtoService.findById(id);
     }
 
+    @PostMapping("/salvarLista")
+    public List<Produto> salvarLista(@RequestBody List<Produto> produtos) {
+        return produtoService.salvarLista(produtos);
+    }
 
 }
