@@ -103,4 +103,21 @@ public class ProdutoController {
         return produtoService.findTotalPreco();
     }
 
+    // Endpoints de buscas detalhadas por quantidade
+
+    @GetMapping("/buscarPorQuantidade")
+    public List<Produto> buscarPorQuantidade(Integer valor){
+        return produtoService.findByQuantidade(valor);
+    }
+
+    @GetMapping("/buscarPorQuantidadeMenorQue")
+    public List<Produto> buscarPorQuantidadeMenorQue(Integer valor){
+        return produtoService.findByQuantidadeLessThan(valor);
+    }
+
+    @GetMapping("/buscarPorQuantidadeMaiorQue")
+    public List<Produto> buscarPorQuantidadeMaiorQue(Integer valor){
+        return produtoService.findByQuantidadeGreaterThan(valor);
+    }
+
 }
