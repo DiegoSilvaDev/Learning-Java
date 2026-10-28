@@ -3,6 +3,7 @@ package com.produtoapi.controller;
 import com.produtoapi.model.Produto;
 import com.produtoapi.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -53,5 +54,30 @@ public class ProdutoController {
     public List<Produto> salvarLista(@RequestBody List<Produto> produtos) {
         return produtoService.salvarLista(produtos);
     }
+    
+    @GetMapping("/buscarPorNome")
+    public List<Produto> buscarPorNome(@RequestParam String valor){
+        return produtoService.findByNome(valor);
+    }
 
+    // Endpoint de buscas detalhadas
+    @GetMapping("/buscarPorNomeContendo")
+    public List<Produto> buscarPorNomeContendo(@RequestParam String valor){
+        return produtoService.findByNomeContaining(valor);
+    }
+
+    @GetMapping("/buscarPorNomeEStatus")
+    public List<Produto> buscarPorNomeEStatus(@RequestParam String nome, @RequestParam String status ){
+        return produtoService.findByNomeAndStatus(nome, status);
+    }
+
+    @GetMapping("/buscarPorNomeComecandoCom")
+    public List<Produto> buscarPorNomeComecandoCom(@RequestParam String valor){
+        return produtoService.findByNomeStartingWith(valor);
+    }
+
+    @GetMapping("/buscarPorNomeTerminandoCom")
+    public List<Produto> buscarPorNomeTerminandoCom(@RequestParam String valor) {
+        return produtoService.findByNomeEndingWith(valor);
+    }
 }
