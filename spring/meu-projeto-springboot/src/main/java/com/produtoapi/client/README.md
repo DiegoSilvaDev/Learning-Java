@@ -11,3 +11,14 @@
 ### Exemplo: Página de Erro
 
 ![Referência página de erro](./img/ref2.png)
+
+--- 
+
+# Integração de Aplicações Exeternas - CRUD
+
+### Exemplo: Página de Listagem
+
+## CRUD - Cliente HTML/JavaScript
+
+![Referência página de Listagem com CRUD](./img/ref3.png)
+

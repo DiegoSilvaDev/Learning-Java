@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta tags para definir a codificação de caracteres e viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Título da página -->
+    <title>Cliente Web Externo</title>
+</head>
+<style>
+    /* Estilos gerais da página (corpo) */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f7f6;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+    }
+
+    /* Alinhamento e cor dos títulos principal e secundário */
+    h1, h2 {
+        color: #2c3e50;
+        text-align: center;
+    }
+
+    /* Container do formulário de entrada de dados */
+    .form-container {
+        max-width: 500px;
+        margin: 20px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Divs que agrupam cada par de Label/Input */
+    .form-container div {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Etiquetas de texto dos campos (Labels) */
+    .form-container label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    /* Caixas de entrada de texto (Inputs) */
+    .form-container input,
+    .form-container select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    /* Efeito visual quando o usuário clica/foca em um Input */
+    .form-container input:focus,
+    .form-container select:focus {
+        border-color: #3498db;
+        outline: none;
+    }
+
+    /* Estilização das options (opções do select) */
+    .form-container select option {
+        color: #333;
+        background-color: #fff;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* Container que agrupa os botões de ação */
+    .button-container {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    /* Estilo base aplicado a TODOS os botões */
+    button {
+        padding: 10px 15px;
+        margin: 5px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        transition: background 0.2s;
+    }
+
+    /* Cores específicas baseadas na posição/ordem de cada botão */
+    button:nth-child(1) { background-color: #2ecc71; color: white; } /* Salvar */
+    button:nth-child(2) { background-color: #f1c40f; color: white; } /* Atualizar */
+    button:nth-child(3) { background-color: #e74c3c; color: white; } /* Deletar */
+    button:nth-child(4) { background-color: #3498db; color: white; } /* Consultar */
+    button:nth-child(5) { background-color: #95a5a6; color: white; } /* Limpar */
+
+    /* Efeito visual ao passar o mouse sobre qualquer botão (Hover) */
+    button:hover {
+        opacity: 0.7;
+    }
+
+    /* Lista que exibe os produtos cadastrados (UL) */
+    #lista-produtos {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 0;
+        list-style: none;
+    }
+
+    /* Cada item individual da lista de produtos (LI) */
+    #lista-produtos li {
+        background: #fff;
+        padding: 12px;
+        margin-bottom: 8px;
+        border-left: 5px solid #3498db;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    /* Parágrafo informativo do totalizadores */
+    #total-produtos {
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+</style>
+<body>
+    <h1>CRUD - Cliente HTML/JavaScript</h1> <!-- Cabeçalho principal da página -->
+
+    <!-- Formulário de Entrada de Dados -->
+    <div class="form-container">
+        <div>
+            <label for="id">ID:</label>
+            <input type="text" id="id"> <!-- Campo de entrada para o ID do produto -->
+        </div>
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome"> <!-- Campo de entrada para o Nome do produto -->
+        </div>
+        <div>
+            <label for="preco">Preço:</label>
+            <input type="text" id="preco"> <!-- Campo de entrada para o Preço do produto -->
+        </div>
+        <div>
+            <label for="quantidade">Quantidade:</label>
+            <input type="text" id="quantidade"> <!-- Campo de entrada para a Quantidade do produto -->
+        </div>
+        <div>
+            <label for="status">Status:</label>
+            <select id="status" aria-placeholder="Selecione:"> <!-- Campo de entrada para o Status do produto -->
+                <option value="" disabled selected hidden>Selecione o status</option>
+                <option value="disp">Disponível</option>
+                <option value="indisp">Indisponível</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Botões para salvar, atualizar, deletar e consultar -->
+    <div class="button-container">
+        <button onclick="salvar()">Salvar</button>
+        <button onclick="atualizar()">Atualizar</button>
+        <button onclick="deletar()">Deletar</button>
+        <button onclick="carregarCampos()">Consultar</button>
+        <button onclick="limparCampos()">Limpar</button>
+    </div>
+
+    <h2>Lista de Produtos</h2>
+    <!-- Lista para exibir os produtos -->
+    <ul id="lista-produtos"></ul>
+    <p id="total-produtos"></p> <!-- Parágrafo para exibir o total de produtos -->
+
+    <!-- Scripts para Manipulação de dados e DOM -->
+    <script>
+        const BASE_URL = 'http://localhost:8080/produtos'; // URL base da API
+
+        // Função para coletar dados do Form
+        function getProdutoForm() {
+            const nome = document.getElementById('nome').value;
+            const preco = document.getElementById('preco').value;
+            const quantidade = document.getElementById('quantidade').value;
+            const status = document.getElementById('status').value;
+            return { nome, preco : parseFloat(preco), quantidade : parseInt(quantidade), status};
+        }
+
+        async function listarTodos(){
+            const response = await fetch(BASE_URL);
+            const produtos = await response.json();
+            const lista = document.getElementById('lista-produtos');
+            const total = document.getElementById('total-produtos');
+            lista.innerText = '';
+            produtos.forEach(produto => {
+                const item = document.createElement('li');
+                item.textContent = `ID: ${produto.id} | Nome: ${produto.nome} | Preço: R$${produto.preco} | Quantidade ${produto.quantidade} | Status: ${produto.status}`
+                lista.appendChild(item);
+            });
+            total.textContent = `Total de produtos: ${produtos.length}`;
+        }
+
+        async function salvar(){
+            const produto = getProdutoForm();
+            await fetch(BASE_URL, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(produto)
+            });
+            await listarTodos();
+        }
+
+        async function atualizar(){
+            const produto = getProdutoForm();
+            const id = document.getElementById('id').value;
+            await fetch(`${BASE_URL}/${id}`, {
+                method: 'PUT',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(produto)
+            });
+            await listarTodos();
+        }
+
+        async function deletar(){
+            const id = document.getElementById('id').value
+            await fetch(`${BASE_URL}/${id}`, {
+                method: 'DELETE'
+            });
+            await listarTodos();
+        }
+
+        async function carregarCampos(){
+            const id = document.getElementById('id').value
+            await fetch(`${BASE_URL}/${id}`)
+                .then(response => {
+                   return response.json();
+                }).then(produto => {
+                    document.getElementById('nome').value = produto.nome;
+                    document.getElementById('preco').value = produto.preco;
+                    document.getElementById('quantidade').value = produto.quantidade;
+                    document.getElementById('status').value = produto.status;
+                })
+                .catch(error => {
+                    console.error('Erro ao consultado prouto: ', error);
+                });
+        }
+
+        function limparCampos(){
+            document.getElementById('id').value = '';
+            document.getElementById('nome').value = '';
+            document.getElementById('preco').value = '';
+            document.getElementById('quantidade').value = '';
+            document.getElementById('status').value = '';
+        }
+
+        document.addEventListener('DOMContentLoaded', listarTodos);
+
+    </script>
+
+</body>
+</html>
