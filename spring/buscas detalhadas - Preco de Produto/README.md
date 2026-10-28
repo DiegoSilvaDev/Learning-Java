@@ -54,7 +54,7 @@
 ## Service
 
 ```java
-    // Métodos de busca por nome
+    // Métodos de busca por preço
     public List<Produto> findByPreco(Double preco) {
         return produtoRepository.findByPreco(preco);
     }
@@ -77,7 +77,7 @@
 **Endpoints**
 
 ```java
-    // Endpoints de busca por nome
+    // Endpoints de busca por preço
     @GetMapping("/buscarPorPreco")
     public List<Produto> buscarPorPreco(@RequestParam Double valor) {
         return produtoService.findByPreco(valor);
