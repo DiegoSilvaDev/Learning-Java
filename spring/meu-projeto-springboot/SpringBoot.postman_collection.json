@@ -10,6 +10,452 @@
       "name": "Produtos",
       "item": [
         {
+          "name": "BuscaDetalhada - nomeProduto",
+          "item": [
+            {
+              "name": "GET - buscarPorNome",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/buscarPorNome?valor=Cadeira",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "buscarPorNome"
+                  ],
+                  "query": [
+                    {
+                      "key": "valor",
+                      "value": "Cadeira"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - buscarPorNomeContendo",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/buscarPorNomeContendo?valor=Caixa",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "buscarPorNomeContendo"
+                  ],
+                  "query": [
+                    {
+                      "key": "valor",
+                      "value": "Caixa"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - buscarPorNomeEStatus",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/buscarPorNomeEStatus?nome=Notebook&status=Disponível",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "buscarPorNomeEStatus"
+                  ],
+                  "query": [
+                    {
+                      "key": "nome",
+                      "value": "Notebook"
+                    },
+                    {
+                      "key": "status",
+                      "value": "Disponível"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - buscarPorNomeComecandoCom",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/buscarPorNomeComecandoCom?valor=Fone",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "buscarPorNomeComecandoCom"
+                  ],
+                  "query": [
+                    {
+                      "key": "valor",
+                      "value": "Fone"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - buscarPorNomeTerminandoCom",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/buscarPorNomeTerminandoCom?valor=Gamer",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "buscarPorNomeTerminandoCom"
+                  ],
+                  "query": [
+                    {
+                      "key": "valor",
+                      "value": "Gamer"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "BuscaDetalhada - precoProduto",
+          "item": [
+            {
+              "name": "GET - buscarPorPreco",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/buscarPorPreco?valor=200.0",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "buscarPorPreco"
+                  ],
+                  "query": [
+                    {
+                      "key": "valor",
+                      "value": "200.0"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - buscarPorPrecoMaiorQue",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/buscarPorPrecoMaiorQue?valor=500.0",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "buscarPorPrecoMaiorQue"
+                  ],
+                  "query": [
+                    {
+                      "key": "valor",
+                      "value": "500.0"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - buscarPorPrecoMenorQue",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/buscarPorPrecoMenorQue?valor=100.0",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "buscarPorPrecoMenorQue"
+                  ],
+                  "query": [
+                    {
+                      "key": "valor",
+                      "value": "100.0"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - buscarTotalPreco",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/buscarTotalPreco",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "buscarTotalPreco"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "BuscaDetalhada - quantidadeProduto",
+          "item": [
+            {
+              "name": "GET - buscarPorQuantidade",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/buscarPorQuantidade?valor=50",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "buscarPorQuantidade"
+                  ],
+                  "query": [
+                    {
+                      "key": "valor",
+                      "value": "50"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - buscarPorQuantidadeMaiorQue",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/buscarPorQuantidadeMaiorQue?valor=15",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "buscarPorQuantidadeMaiorQue"
+                  ],
+                  "query": [
+                    {
+                      "key": "valor",
+                      "value": "15"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - buscarPorQuantidadeMenorQue",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/buscarPorQuantidadeMenorQue?valor=5",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "buscarPorQuantidadeMenorQue"
+                  ],
+                  "query": [
+                    {
+                      "key": "valor",
+                      "value": "5"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "BuscaDetalhada - statusProduto e preço",
+          "item": [
+            {
+              "name": "GET - buscarPorStatus",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/buscarPorStatus",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "buscarPorStatus"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - buscarPorStatusNulo",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/buscarPorStatus?valor=Disponível",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "buscarPorStatus"
+                  ],
+                  "query": [
+                    {
+                      "key": "valor",
+                      "value": "Disponível"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - buscarPorPrecoEStatus",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/buscarPorPrecoEStatus?preco=200.0&status=Disponível",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "buscarPorPrecoEStatus"
+                  ],
+                  "query": [
+                    {
+                      "key": "preco",
+                      "value": "200.0"
+                    },
+                    {
+                      "key": "status",
+                      "value": "Disponível"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - contarTotalDeProdutos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/contarTotalDeProdutos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "contarTotalDeProdutos"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - buscarPorStatusPadrao",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/produtos/buscarPorStatusPadrao",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "produtos",
+                    "buscarPorStatusPadrao"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
           "name": "GET - listarTodos",
           "request": {
             "method": "GET",
@@ -34,14 +480,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:8080/produtos",
+              "raw": "http://localhost:8080/produtos/3",
               "protocol": "http",
               "host": [
                 "localhost"
               ],
               "port": "8080",
               "path": [
-                "produtos"
+                "produtos",
+                "3"
               ]
             }
           },
@@ -52,15 +499,25 @@
           "request": {
             "method": "POST",
             "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "   [\r\n        {\r\n            \"nome\": \"Ventilador\",\r\n            \"preco\": 200.0,\r\n            \"quantidade\": 10,\r\n            \"status\": null\r\n        },\r\n        {\r\n            \"nome\": \"Luminária\",\r\n            \"preco\": 120.0,\r\n            \"quantidade\": 8,\r\n            \"status\": null\r\n        }\r\n    ]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
             "url": {
-              "raw": "http://localhost:8080/produtos",
+              "raw": "http://localhost:8080/produtos/salvarLista",
               "protocol": "http",
               "host": [
                 "localhost"
               ],
               "port": "8080",
               "path": [
-                "produtos"
+                "produtos",
+                "salvarLista"
               ]
             }
           },
@@ -71,8 +528,18 @@
           "request": {
             "method": "POST",
             "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nome\": \"Teste3\",\r\n    \"quantidade\": 15,\r\n    \"preco\": 25.00,\r\n    \"status\": \"disponível\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
             "url": {
-              "raw": "localhost:8080/produtos",
+              "raw": "http://localhost:8080/produtos",
+              "protocol": "http",
               "host": [
                 "localhost"
               ],
@@ -89,14 +556,24 @@
           "request": {
             "method": "PUT",
             "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "     { \r\n          \"nome\": \"Notebook Gamer\",\r\n          \"quantidade\": 5,\r\n          \"preco\": 4500.00,\r\n          \"status\": \"disponível\"\r\n    }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
             "url": {
-              "raw": "localhost:8080/",
+              "raw": "localhost:8080/produtos/1",
               "host": [
                 "localhost"
               ],
               "port": "8080",
               "path": [
-                ""
+                "produtos",
+                "1"
               ]
             }
           },
@@ -108,14 +585,14 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "localhost:8080/produtos/2",
+              "raw": "localhost:8080/produtos/107",
               "host": [
                 "localhost"
               ],
               "port": "8080",
               "path": [
                 "produtos",
-                "2"
+                "107"
               ]
             }
           },
@@ -127,14 +604,13 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "localhost:8080/produtos/2",
+              "raw": "localhost:8080/produtos",
               "host": [
                 "localhost"
               ],
               "port": "8080",
               "path": [
-                "produtos",
-                "2"
+                "produtos"
               ]
             }
           },
