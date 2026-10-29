@@ -11,7 +11,7 @@ public interface ProdutoRepository extends JpaRepository<Produto, Long> {
     List<Produto> findByNome(String nome);
 
     List<Produto> findByNomeContaining(String nome);
-    
+
     List<Produto> findByNomeAndStatus(String nome, String status);
 
     List<Produto> findByNomeStartingWith(String prefix);
@@ -35,4 +35,13 @@ public interface ProdutoRepository extends JpaRepository<Produto, Long> {
     List<Produto> findByQuantidadeLessThan(Integer quantidade);
 
     List<Produto> findByQuantidadeGreaterThan(Integer quantidade);
+
+    // Busca detalhada referente a status e preço
+
+    List<Produto> findByStatus(String status);
+
+    List<Produto> findByStatusIsNull();
+
+    List<Produto> findByPrecoAndStatus(Double preco, String status);
+
 }

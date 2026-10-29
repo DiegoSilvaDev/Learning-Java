@@ -106,18 +106,49 @@ public class ProdutoController {
     // Endpoints de buscas detalhadas por quantidade
 
     @GetMapping("/buscarPorQuantidade")
-    public List<Produto> buscarPorQuantidade(Integer valor){
+    public List<Produto> buscarPorQuantidade(@RequestParam Integer valor){
         return produtoService.findByQuantidade(valor);
     }
 
     @GetMapping("/buscarPorQuantidadeMenorQue")
-    public List<Produto> buscarPorQuantidadeMenorQue(Integer valor){
+    public List<Produto> buscarPorQuantidadeMenorQue(@RequestParam Integer valor){
         return produtoService.findByQuantidadeLessThan(valor);
     }
 
     @GetMapping("/buscarPorQuantidadeMaiorQue")
-    public List<Produto> buscarPorQuantidadeMaiorQue(Integer valor){
+    public List<Produto> buscarPorQuantidadeMaiorQue(@RequestParam Integer valor){
         return produtoService.findByQuantidadeGreaterThan(valor);
+    }
+
+    // Endpoints de buscas detalhadas por status e preço
+
+    @GetMapping("/buscarPorStatus")
+    public List<Produto> buscarPorStatus(@RequestParam(required = false) String valor){
+        return produtoService.findByStatus(valor);
+    }
+
+    // Retorna exclusivamente produtos coms stats null
+    @GetMapping("/buscarPorStatusNulo")
+    public List<Produto> buscarPorStatusNulo(){
+        return  produtoService.findByStatusIsNull();
+    }
+
+    // Busca baseada em dois campos (preço e status)
+    @GetMapping("/buscarPorPrecoEStatus")
+    public List<Produto> buscarPorPrecoEStatus(@RequestParam Double preco, @RequestParam String status){
+        return produtoService.findByPrecoAndStatus(preco, status);
+    }
+
+    // Endpoint para trazer o total de produtos
+    @GetMapping("/contarTotalDeProdutos")
+    public Long contarTotalDeProdutos(){
+        return produtoService.count();
+    }
+
+    // Se não passar nada, retorna todos produtos com status padrão, neste caso será "Disponível".
+    @GetMapping("/buscarPorStatusPadrao")
+    public List<Produto> buscarPorStatusPadrao(@RequestParam(defaultValue = "Disponível") String valor){
+        return produtoService.findByStatus(valor);
     }
 
 }

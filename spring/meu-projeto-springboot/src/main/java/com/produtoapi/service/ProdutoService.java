@@ -96,4 +96,22 @@ public class ProdutoService {
     public List<Produto> findByQuantidadeGreaterThan(Integer quantidade){
         return produtoRepository.findByQuantidadeGreaterThan(quantidade);
     }
+
+    // Métodos de Busca detalhada referente a status e preço
+    public List<Produto> findByStatus(String status){
+        return produtoRepository.findByStatus(status);
+    }
+
+    public List<Produto> findByStatusIsNull(){
+        return  produtoRepository.findByStatusIsNull();
+    }
+
+    public List<Produto> findByPrecoAndStatus(Double preco, String status){
+        return produtoRepository.findByPrecoAndStatus(preco, status);
+    }
+
+    // Método para trazer o número total de produtos
+    public Long count(){
+        return produtoRepository.count();
+    }
  }
