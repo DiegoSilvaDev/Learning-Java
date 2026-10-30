@@ -75,7 +75,7 @@ Aqui o computador não sabe o que está procurando. Ele analisa as característi
 
 - **Acurácia**: mostra quantas vezes o modelo acertou.
     - ### Cálculo da acurácia:
-        $$ \mathbf{Acurácia} = \frac{\text{número de acertos}}{\text{total de tentativas}} = \frac{80}{90} \approx 88,88\% $$
+$$ \mathbf{Acurácia} = \frac{\text{número de acertos}}{\text{total de tentativas}} = \frac{80}{90} \approx 88,88\% $$
 <br>
 
 - Arredondando, dá aproximadamente **89%**.
@@ -238,11 +238,11 @@ $$\text{Suporte}(A\rightarrow B) = \frac{\text{Transações contendo } A \text{ 
 
 - **Confiança (Confidence)**: Mede a certeza da regra. É a frequência com que o item B é comprado dado que o item A já foi comprado.
 
-$$\text{Confiança}(A\rightarrow B) = \frac{\text{Suporte}(A \text{ e } B)}{\text{Suporte}(A)}$$
+$$\text{Confiança}(A\rightarrow B) = \frac{\text{Suporte}(A\text{ e } B)}{\text{Suporte}(A)}$$
 
 - **Lift (Alavancagem)**: Mede a força da regra em relação ao acaso. Um Lift maior que 1 significa que a compra do item A aumenta consideravelmente a chance da compra do item B. Se o Lift for 1, os itens são independentes.
 
-$$\text{Lift}(A\rightarrow B) = \frac{\text{Confiança}(A\rightarrow B)}{\text{Suporte}(B)}$$
+$$ \text{Lift}(A\rightarrow B) = \frac{\text{Confiança}(A\rightarrow B)}{\text{Suporte}(B)} $$
 
 
 ## Principais Algoritmos
