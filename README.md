@@ -54,7 +54,6 @@ O objetivo é consolidar os fundamentos da programação, aprofundar os conhecim
 - [ ] **Ferramentas e boas práticas**
   - Git e GitHub
   - Maven
-  - Docker
   - Princípios SOLID
   - Clean Code
 
@@ -63,7 +62,7 @@ O objetivo é consolidar os fundamentos da programação, aprofundar os conhecim
 A estrutura será organizada conforme os conteúdos e projetos desenvolvidos durante os estudos.
 
 ```text
-java-studies/
+java/
 ├── fundamentos/
 ├── poo/
 ├── recursos-da-linguagem/
@@ -83,7 +82,6 @@ java-studies/
 - **Git e GitHub** — versionamento e compartilhamento de código
 - **Spring Boot** — desenvolvimento de aplicações back-end
 - **SQL** — consultas e manipulação de dados
-- **PostgreSQL** — banco de dados relacional
 
 ## 📈 Evolução dos estudos
 
@@ -93,8 +91,4 @@ Mais do que reunir códigos, a proposta é praticar os conceitos estudados, comp
 
 ---
 
-<<<<<<< HEAD
 **Em constante aprendizado.** ☕
-=======
-**Em constante aprendizado.** ☕
->>>>>>> b45c6cf598137e395ee82e9be84a249db1e6f3de
